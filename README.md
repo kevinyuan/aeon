@@ -52,8 +52,15 @@ high and low level build systems)::
 ### To install aeon:
 
     pip install git+https://github.com/NervanaSystems/aeon.git
+    
+    or 
+
+    git clone https://github.com/NervanaSystems/aeon.git
+    cd aeon
+    python setup.py install
 
 Note: if installing system wide (as opposed to within a virtual environment) you may need to run `sudo`.
 
 Now continue on to the [user guide](doc/source/user_guide.rst) to get started using aeon. Or to the
 [developer guide](doc/source/developer_guide.rst) to developing custom loaders/transformers.
+
