@@ -63,14 +63,14 @@ export CC="clang++"
 pkg-config --exists opencv
 if [[ $? == 0 ]]; then
     export IMGFLAG="-DHAS_IMGLIB"
-	export INC="$(pkg-config --cflags opencv)"
+	export INC="$(pkg-config --cflags opencv) ${INC}"
 	export IMGLDIR="$(pkg-config --libs-only-L opencv)"
 	export IMGLIBS="$(pkg-config --libs-only-l opencv)"
 fi
 
 pkg-config --exists sox
 if [[ $? == 0 ]]; then
-	export INC="$(pkg-config --cflags sox)"
+	export INC="$(pkg-config --cflags sox) ${INC}"
 	export IMGLDIR="$IMGLDIR $(pkg-config --libs-only-L sox)"
 	export IMGLIBS="$IMGLIBS $(pkg-config --libs-only-l sox)"
 fi
